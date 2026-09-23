@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+
+const title = "Jesus Carrascal";
+const description = "Jesus Carrascal";
+const image = "/chico-gel.jpg";
+---
+
+<!doctype html>
+<html lang="en" class="bg-white">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:url" content={Astro.site} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+
+  <body
+    class="min-h-dvh bg-white text-neutral-900 antialiased"
+  >
+    <main
+      class="flex min-h-dvh items-center justify-center px-6 py-16"
+    >
+      <img
+        src={image}
+        alt=""
+        width="399"
+        height="501"
+        decoding="async"
+        class="block h-auto w-[min(70vw,18rem)]"
+      />
+    </main>
+  </body>
+</html>
